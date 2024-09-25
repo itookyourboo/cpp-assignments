@@ -36,14 +36,15 @@ int main() {
     string type1, type2, type3;
 
     vector<string> types;
-    cout << "Введите первые два типа данных: ";
-    cin >> type1 >> type2;
+    cout << "Введите первый тип данных: ";
+    getline(cin, type1);
+    cout << "Введите второй тип данных: ";
+    getline(cin, type2);
 
     types.push_back(type1);
     types.push_back(type2);
 
     cout << "Если хотите ввести третий тип данных, введите его (иначе оставьте пустым): ";
-    cin.ignore();
     getline(cin, type3);
     if (!type3.empty()) {
         types.push_back(type3);
